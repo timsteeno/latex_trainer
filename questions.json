@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "prompt": "Write the linear equation: y = 3x + 5",
+    "target": "y = 3x + 5",
+    "hint": "This is a basic linear equation. Just type it exactly as shown.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 2,
+    "prompt": "Write the quadratic equation: y = x² - 4x + 7",
+    "target": "y = x^2 - 4x + 7",
+    "hint": "Use the ^ symbol for exponents: x^2 creates a superscript 2.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 3,
+    "prompt": "Write the equation with a subscript: E₁ = mc²",
+    "target": "E_1 = mc^2",
+    "hint": "Use the _ symbol for subscripts: E_1 creates E with subscript 1.",
+    "level": "beginner",
+    "topic": "physics"
+  },
+  {
+    "id": 4,
+    "prompt": "Write a fraction: f(x) = ½x + 3",
+    "target": "f(x) = \\frac{1}{2}x + 3",
+    "hint": "Use \\frac{numerator}{denominator} to create fractions.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 5,
+    "prompt": "Write an equation with square root: y = √x",
+    "target": "y = \\sqrt{x}",
+    "hint": "Use \\sqrt{} for square root notation.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 6,
+    "prompt": "Write a simple exponential function: f(x) = e^x",
+    "target": "f(x) = e^x",
+    "hint": "Use ^ for exponents and e for the natural number.",
+    "level": "beginner", 
+    "topic": "calculus"
+  },
+  {
+    "id": 7,
+    "prompt": "Write a logarithmic equation: y = log₂(x)",
+    "target": "y = \\log_2(x)",
+    "hint": "Use \\log_2 for logarithm with base 2.",
+    "level": "intermediate",
+    "topic": "algebra"
+  },
+  {
+    "id": 8,
+    "prompt": "Write the equation for a line with slope β₁ and y-intercept β₀",
+    "target": "y = \\beta_0 + \\beta_1 x",
+    "hint": "Use \\beta for the Greek letter β and subscripts with _0 and _1.",
+    "level": "intermediate",
+    "topic": "statistics"
+  },
+  {
+    "id": 9,
+    "prompt": "Write the quadratic formula: x = (-b ± √(b² - 4ac))/2a",
+    "target": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    "hint": "Use \\pm for the plus-minus symbol, \\sqrt{} for square root, and \\frac{}{} for the fraction.",
+    "level": "intermediate",
+    "topic": "algebra"
+  },
+  {
+    "id": 10,
+    "prompt": "Write a summation: ∑(i=1 to n) i²",
+    "target": "\\sum_{i=1}^{n} i^2",
+    "hint": "Use \\sum_{lower}^{upper} for summation notation.",
+    "level": "intermediate",
+    "topic": "calculus"
+  },
+  {
+    "id": 11,
+    "prompt": "Write a product notation: ∏(i=1 to n) i",
+    "target": "\\prod_{i=1}^{n} i",
+    "hint": "Use \\prod_{lower}^{upper} for product notation.",
+    "level": "intermediate",
+    "topic": "calculus"
+  },
+  {
+    "id": 12,
+    "prompt": "Write a simple 2×2 matrix with elements 1, 2, 3, 4",
+    "target": "\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}",
+    "hint": "Use \\begin{pmatrix}...\\end{pmatrix} with & to separate columns and \\\\ for new rows.",
+    "level": "advanced",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 13,
+    "prompt": "Write a definite integral: ∫(a to b) f(x) dx",
+    "target": "\\int_{a}^{b} f(x) \\, dx",
+    "hint": "Use \\int_{lower}^{upper} for definite integrals.",
+    "level": "advanced",
+    "topic": "calculus"
+  },
+  {
+    "id": 14,
+    "prompt": "Write a limit expression: lim(x→∞) (1 + 1/x)^x",
+    "target": "\\lim_{x \\to \\infty} \\left(1 + \\frac{1}{x}\\right)^x",
+    "hint": "Use \\lim_{x \\to \\infty} for the limit and \\left( \\right) for proper sizing of parentheses.",
+    "level": "advanced",
+    "topic": "calculus"
+  },
+  {
+    "id": 15,
+    "prompt": "Write a partial derivative: ∂f/∂x",
+    "target": "\\frac{\\partial f}{\\partial x}",
+    "hint": "Use \\partial for the partial derivative symbol and \\frac{}{} for the fraction.",
+    "level": "advanced",
+    "topic": "calculus"
+  },
+  {
+    "id": 16,
+    "prompt": "Write a vector equation: →v = a→i + b→j + c→k",
+    "target": "\\vec{v} = a\\vec{i} + b\\vec{j} + c\\vec{k}",
+    "hint": "Use \\vec{} to denote vectors.",
+    "level": "advanced",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 17,
+    "prompt": "Write a piecewise function: f(x) = {x if x≥0, -x if x<0}",
+    "target": "f(x) = \\begin{cases} x & \\text{if } x \\geq 0 \\\\ -x & \\text{if } x < 0 \\end{cases}",
+    "hint": "Use \\begin{cases}...\\end{cases} for piecewise functions, & to separate values from conditions, and \\\\ for new lines.",
+    "level": "advanced",
+    "topic": "algebra"
+  },
+  {
+    "id": 18,
+    "prompt": "Write the binomial coefficient formula: C(n,k) = n!/(k!(n-k)!)",
+    "target": "C(n,k) = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
+    "hint": "Use \\binom{n}{k} for binomial coefficients and \\frac{}{} for the fraction.",
+    "level": "intermediate",
+    "topic": "combinatorics"
+  },
+  {
+    "id": 19,
+    "prompt": "Write an equation with a triple integral: ∭(V) f(x,y,z) dV",
+    "target": "\\iiint_{V} f(x,y,z) \\, dV",
+    "hint": "Use \\iiint_{region} for triple integrals.",
+    "level": "expert",
+    "topic": "calculus"
+  },
+  {
+    "id": 20,
+    "prompt": "Write a simple differential equation: dy/dx + P(x)y = Q(x)",
+    "target": "\\frac{dy}{dx} + P(x)y = Q(x)",
+    "hint": "Use \\frac{dy}{dx} for the derivative notation.",
+    "level": "advanced",
+    "topic": "differential equations"
+  }
+]
