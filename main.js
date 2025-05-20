@@ -11,6 +11,7 @@ const nextButton = document.getElementById('nextButton');
 const feedback = document.getElementById('feedback');
 const hintArea = document.getElementById('hintArea');
 const progressInfo = document.getElementById('progressInfo');
+const showAnswerButton = document.getElementById('showAnswerButton');
 
 // State variables
 let questions = [];
@@ -59,6 +60,10 @@ function loadQuestion(index) {
     previewArea.innerHTML = '';
     nextButton.disabled = true;
     
+    // Hide target display and show the show answer button
+    targetDisplay.style.display = 'none';
+    showAnswerButton.classList.remove('hidden');
+    
     // Update progress info
     progressInfo.textContent = `Question ${index + 1} of ${questions.length} (${question.level})`;
 }
@@ -72,8 +77,12 @@ latexInput.addEventListener('input', function() {
 // Check answer button
 checkButton.addEventListener('click', function() {
     // Remove $ delimiters and normalize whitespace
-    const userInput = latexInput.value.trim().replace(/\s+/g, ' ').replace(/^\$|\$$/g, '');
-    const correctAnswer = questions[currentQuestionIndex].target.trim().replace(/\s+/g, ' ').replace(/^\$|\$$/g, '');
+    const userInput = latexInput.value.trim()
+        .replace(/\s+/g, '')  // Remove all whitespace
+        .replace(/^\$|\$$/g, '');
+    const correctAnswer = questions[currentQuestionIndex].target.trim()
+        .replace(/\s+/g, '')  // Remove all whitespace
+        .replace(/^\$|\$$/g, '');
     
     // Compare the normalized strings
     if (userInput === correctAnswer) {
@@ -109,6 +118,12 @@ nextButton.addEventListener('click', function() {
         nextButton.disabled = true;
         progressInfo.textContent = 'All questions completed';
     }
+});
+
+// Show Answer button
+showAnswerButton.addEventListener('click', function() {
+    targetDisplay.style.display = 'block';
+    showAnswerButton.classList.add('hidden');
 });
 
 // Initialize the application
