@@ -17,6 +17,13 @@ const showAnswerButton = document.getElementById('showAnswerButton');
 let questions = [];
 let currentQuestionIndex = 0;
 let questionOrder = [];
+let currentLevel = 'beginner';
+let levelIndices = {
+    'beginner': { start: 0, end: 0 },
+    'intermediate': { start: 0, end: 0 },
+    'advanced': { start: 0, end: 0 },
+    'expert': { start: 0, end: 0 }
+};
 
 // Shuffle array using Fisher-Yates algorithm
 function shuffleArray(array) {
@@ -25,6 +32,23 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+}
+
+// Get questions for current level
+function getCurrentLevelQuestions() {
+    const { start, end } = levelIndices[currentLevel];
+    return questionOrder.slice(start, end);
+}
+
+// Move to next level
+function moveToNextLevel() {
+    const levels = ['beginner', 'intermediate', 'advanced', 'expert'];
+    const currentIndex = levels.indexOf(currentLevel);
+    if (currentIndex < levels.length - 1) {
+        currentLevel = levels[currentIndex + 1];
+        return true;
+    }
+    return false;
 }
 
 // Fetch questions from JSON file
@@ -40,9 +64,31 @@ async function fetchQuestions() {
         const levelOrder = { 'beginner': 0, 'intermediate': 1, 'advanced': 2, 'expert': 3 };
         questions.sort((a, b) => levelOrder[a.level] - levelOrder[b.level]);
         
+        // Calculate level indices
+        let currentIndex = 0;
+        for (const level of ['beginner', 'intermediate', 'advanced', 'expert']) {
+            const levelQuestions = questions.filter(q => q.level === level);
+            levelIndices[level] = {
+                start: currentIndex,
+                end: currentIndex + levelQuestions.length
+            };
+            currentIndex += levelQuestions.length;
+        }
+        
         // Initialize question order
         questionOrder = Array.from({length: questions.length}, (_, i) => i);
-        shuffleArray(questionOrder);
+        
+        // Shuffle questions within each level
+        for (const level of ['beginner', 'intermediate', 'advanced', 'expert']) {
+            const { start, end } = levelIndices[level];
+            const levelSlice = questionOrder.slice(start, end);
+            shuffleArray(levelSlice);
+            questionOrder.splice(start, end - start, ...levelSlice);
+        }
+        
+        // Start with beginner level
+        currentLevel = 'beginner';
+        currentQuestionIndex = 0;
         
         // Initialize first question
         loadQuestion(0);
@@ -59,7 +105,31 @@ function loadQuestion(index) {
         return;
     }
     
-    const question = questions[questionOrder[index]];
+    const levelQuestions = getCurrentLevelQuestions();
+    if (index >= levelQuestions.length) {
+        if (moveToNextLevel()) {
+            currentQuestionIndex = 0;
+            loadQuestion(0);
+            return;
+        } else {
+            // End of all questions - reshuffle and start over
+            currentLevel = 'beginner';
+            currentQuestionIndex = 0;
+            
+            // Reshuffle questions within each level
+            for (const level of ['beginner', 'intermediate', 'advanced', 'expert']) {
+                const { start, end } = levelIndices[level];
+                const levelSlice = questionOrder.slice(start, end);
+                shuffleArray(levelSlice);
+                questionOrder.splice(start, end - start, ...levelSlice);
+            }
+            
+            loadQuestion(0);
+            return;
+        }
+    }
+    
+    const question = questions[levelQuestions[index]];
     promptText.textContent = question.prompt;
     
     // Display the target formula using MathJax
@@ -79,7 +149,7 @@ function loadQuestion(index) {
     showAnswerButton.classList.remove('hidden');
     
     // Update progress info
-    progressInfo.textContent = `Question ${index + 1} of ${questions.length} (${question.level})`;
+    progressInfo.textContent = `Question ${index + 1} of ${levelQuestions.length} (${currentLevel})`;
 }
 
 // Preview the latex input
@@ -90,11 +160,12 @@ latexInput.addEventListener('input', function() {
 
 // Check answer button
 checkButton.addEventListener('click', function() {
+    const levelQuestions = getCurrentLevelQuestions();
     // Remove $ delimiters and normalize whitespace
     const userInput = latexInput.value.trim()
         .replace(/\s+/g, '')  // Remove all whitespace
         .replace(/^\$|\$$/g, '');
-    const correctAnswer = questions[questionOrder[currentQuestionIndex]].target.trim()
+    const correctAnswer = questions[levelQuestions[currentQuestionIndex]].target.trim()
         .replace(/\s+/g, '')  // Remove all whitespace
         .replace(/^\$|\$$/g, '');
     
@@ -112,21 +183,15 @@ checkButton.addEventListener('click', function() {
 
 // Show hint button
 hintButton.addEventListener('click', function() {
-    hintArea.textContent = questions[questionOrder[currentQuestionIndex]].hint;
+    const levelQuestions = getCurrentLevelQuestions();
+    hintArea.textContent = questions[levelQuestions[currentQuestionIndex]].hint;
     hintArea.style.display = 'block';
 });
 
 // Next question button
 nextButton.addEventListener('click', function() {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-        loadQuestion(currentQuestionIndex);
-    } else {
-        // End of questions - reshuffle and start over
-        shuffleArray(questionOrder);
-        currentQuestionIndex = 0;
-        loadQuestion(currentQuestionIndex);
-    }
+    loadQuestion(currentQuestionIndex);
 });
 
 // Show Answer button
