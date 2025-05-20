@@ -49,6 +49,62 @@
   },
   {
     "id": 7,
+    "prompt": "Write a simple addition: 2 + 2 = 4",
+    "target": "2 + 2 = 4",
+    "hint": "Just type the equation as shown.",
+    "level": "beginner",
+    "topic": "arithmetic"
+  },
+  {
+    "id": 8,
+    "prompt": "Write the formula for area of a circle: A = πr²",
+    "target": "A = \\pi r^2",
+    "hint": "Use \\pi for the pi symbol and r^2 for r squared.",
+    "level": "beginner",
+    "topic": "geometry"
+  },
+  {
+    "id": 9,
+    "prompt": "Write the Pythagorean theorem: a² + b² = c²",
+    "target": "a^2 + b^2 = c^2",
+    "hint": "Use ^ for exponents: a^2 creates a².",
+    "level": "beginner",
+    "topic": "geometry"
+  },
+  {
+    "id": 10,
+    "prompt": "Write a simple inequality: x < 5",
+    "target": "x < 5",
+    "hint": "Just type the inequality as shown.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 11,
+    "prompt": "Write the greater than or equal to inequality: y ≥ 10",
+    "target": "y \\geq 10",
+    "hint": "Use \\geq for the greater than or equal to symbol.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 12,
+    "prompt": "Write an equation with a cube: V = s³",
+    "target": "V = s^3",
+    "hint": "Use ^ for exponents: s^3 creates s³.",
+    "level": "beginner",
+    "topic": "geometry"
+  },
+  {
+    "id": 13,
+    "prompt": "Write the distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²]",
+    "target": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}",
+    "hint": "Use \\sqrt{} for square root, _ for subscripts, and ^ for exponents.",
+    "level": "beginner",
+    "topic": "geometry"
+  },
+  {
+    "id": 14,
     "prompt": "Write a logarithmic equation: y = log₂(x)",
     "target": "y = \\log_2(x)",
     "hint": "Use \\log_2 for logarithm with base 2.",
@@ -56,7 +112,15 @@
     "topic": "algebra"
   },
   {
-    "id": 8,
+    "id": 15,
+    "prompt": "Write the natural logarithm: f(x) = ln(x)",
+    "target": "f(x) = \\ln(x)",
+    "hint": "Use \\ln for the natural logarithm notation.",
+    "level": "beginner",
+    "topic": "calculus"
+  },
+  {
+    "id": 16,
     "prompt": "Write the equation for a line with slope β₁ and y-intercept β₀",
     "target": "y = \\beta_0 + \\beta_1 x",
     "hint": "Use \\beta for the Greek letter β and subscripts with _0 and _1.",
@@ -64,7 +128,31 @@
     "topic": "statistics"
   },
   {
-    "id": 9,
+    "id": 17,
+    "prompt": "Write the Greek letter alpha: α",
+    "target": "\\alpha",
+    "hint": "Use \\alpha for the Greek letter α.",
+    "level": "beginner",
+    "topic": "greek letters"
+  },
+  {
+    "id": 18,
+    "prompt": "Write the Greek letter theta: θ",
+    "target": "\\theta",
+    "hint": "Use \\theta for the Greek letter θ.",
+    "level": "beginner",
+    "topic": "greek letters"
+  },
+  {
+    "id": 19,
+    "prompt": "Write the angle formula in degrees: ∠A = 90°",
+    "target": "\\angle A = 90^{\\circ}",
+    "hint": "Use \\angle for the angle symbol and ^{\\circ} for the degree symbol.",
+    "level": "beginner",
+    "topic": "geometry"
+  },
+  {
+    "id": 20,
     "prompt": "Write the quadratic formula: x = (-b ± √(b² - 4ac))/2a",
     "target": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
     "hint": "Use \\pm for the plus-minus symbol, \\sqrt{} for square root, and \\frac{}{} for the fraction.",
@@ -72,7 +160,7 @@
     "topic": "algebra"
   },
   {
-    "id": 10,
+    "id": 21,
     "prompt": "Write a summation: ∑(i=1 to n) i²",
     "target": "\\sum_{i=1}^{n} i^2",
     "hint": "Use \\sum_{lower}^{upper} for summation notation.",
@@ -80,7 +168,7 @@
     "topic": "calculus"
   },
   {
-    "id": 11,
+    "id": 22,
     "prompt": "Write a product notation: ∏(i=1 to n) i",
     "target": "\\prod_{i=1}^{n} i",
     "hint": "Use \\prod_{lower}^{upper} for product notation.",
@@ -88,7 +176,87 @@
     "topic": "calculus"
   },
   {
-    "id": 12,
+    "id": 23,
+    "prompt": "Write a simple fraction: ⅔",
+    "target": "\\frac{2}{3}",
+    "hint": "Use \\frac{numerator}{denominator} for fractions.",
+    "level": "beginner",
+    "topic": "arithmetic"
+  },
+  {
+    "id": 24,
+    "prompt": "Write a cubic equation: f(x) = x³ + 3x² - 2x + 1",
+    "target": "f(x) = x^3 + 3x^2 - 2x + 1",
+    "hint": "Use ^ for exponents: x^3 creates x³.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 25,
+    "prompt": "Write a simple trigonometric equation: sin(θ) = 0.5",
+    "target": "\\sin(\\theta) = 0.5",
+    "hint": "Use \\sin for sine and \\theta for the Greek letter θ.",
+    "level": "beginner",
+    "topic": "trigonometry"
+  },
+  {
+    "id": 26,
+    "prompt": "Write the cosine function: cos(x)",
+    "target": "\\cos(x)",
+    "hint": "Use \\cos for the cosine function.",
+    "level": "beginner",
+    "topic": "trigonometry"
+  },
+  {
+    "id": 27,
+    "prompt": "Write the tangent function: tan(x)",
+    "target": "\\tan(x)",
+    "hint": "Use \\tan for the tangent function.",
+    "level": "beginner",
+    "topic": "trigonometry"
+  },
+  {
+    "id": 28,
+    "prompt": "Write the Pythagorean identity: sin²(θ) + cos²(θ) = 1",
+    "target": "\\sin^2(\\theta) + \\cos^2(\\theta) = 1",
+    "hint": "Use \\sin and \\cos for sine and cosine, and ^2 for squaring.",
+    "level": "intermediate",
+    "topic": "trigonometry"
+  },
+  {
+    "id": 29,
+    "prompt": "Write a fraction with variables: (x + y)/(a - b)",
+    "target": "\\frac{x + y}{a - b}",
+    "hint": "Use \\frac{numerator}{denominator} for fractions.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 30,
+    "prompt": "Write the identity matrix 2×2: I₂",
+    "target": "I_2 = \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}",
+    "hint": "Use _ for subscripts and \\begin{pmatrix}...\\end{pmatrix} for matrices.",
+    "level": "intermediate",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 31,
+    "prompt": "Write an equation with nth root: y = ∛x",
+    "target": "y = \\sqrt[3]{x}",
+    "hint": "Use \\sqrt[n]{x} for the nth root notation.",
+    "level": "intermediate",
+    "topic": "algebra"
+  },
+  {
+    "id": 32,
+    "prompt": "Write a fraction with nested fractions: 1/(1+1/x)",
+    "target": "\\frac{1}{1+\\frac{1}{x}}",
+    "hint": "Use nested \\frac{}{} commands for nested fractions.",
+    "level": "intermediate",
+    "topic": "algebra"
+  },
+  {
+    "id": 33,
     "prompt": "Write a simple 2×2 matrix with elements 1, 2, 3, 4",
     "target": "\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}",
     "hint": "Use \\begin{pmatrix}...\\end{pmatrix} with & to separate columns and \\\\ for new rows.",
@@ -96,7 +264,7 @@
     "topic": "linear algebra"
   },
   {
-    "id": 13,
+    "id": 34,
     "prompt": "Write a definite integral: ∫(a to b) f(x) dx",
     "target": "\\int_{a}^{b} f(x) \\, dx",
     "hint": "Use \\int_{lower}^{upper} for definite integrals.",
@@ -104,7 +272,39 @@
     "topic": "calculus"
   },
   {
-    "id": 14,
+    "id": 35,
+    "prompt": "Write a double integral: ∬(D) f(x,y) dA",
+    "target": "\\iint_{D} f(x,y) \\, dA",
+    "hint": "Use \\iint_{region} for double integrals.",
+    "level": "advanced",
+    "topic": "calculus"
+  },
+  {
+    "id": 36,
+    "prompt": "Write a simple factorial expression: n!",
+    "target": "n!",
+    "hint": "Just type the factorial as shown.",
+    "level": "beginner",
+    "topic": "combinatorics"
+  },
+  {
+    "id": 37,
+    "prompt": "Write a vector notation: →v",
+    "target": "\\vec{v}",
+    "hint": "Use \\vec{} to denote vectors.",
+    "level": "intermediate",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 38,
+    "prompt": "Write a hat notation (unit vector): v̂",
+    "target": "\\hat{v}",
+    "hint": "Use \\hat{} to denote unit vectors.",
+    "level": "intermediate",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 39,
     "prompt": "Write a limit expression: lim(x→∞) (1 + 1/x)^x",
     "target": "\\lim_{x \\to \\infty} \\left(1 + \\frac{1}{x}\\right)^x",
     "hint": "Use \\lim_{x \\to \\infty} for the limit and \\left( \\right) for proper sizing of parentheses.",
@@ -112,7 +312,7 @@
     "topic": "calculus"
   },
   {
-    "id": 15,
+    "id": 40,
     "prompt": "Write a partial derivative: ∂f/∂x",
     "target": "\\frac{\\partial f}{\\partial x}",
     "hint": "Use \\partial for the partial derivative symbol and \\frac{}{} for the fraction.",
@@ -120,7 +320,7 @@
     "topic": "calculus"
   },
   {
-    "id": 16,
+    "id": 41,
     "prompt": "Write a vector equation: →v = a→i + b→j + c→k",
     "target": "\\vec{v} = a\\vec{i} + b\\vec{j} + c\\vec{k}",
     "hint": "Use \\vec{} to denote vectors.",
@@ -128,7 +328,7 @@
     "topic": "linear algebra"
   },
   {
-    "id": 17,
+    "id": 42,
     "prompt": "Write a piecewise function: f(x) = {x if x≥0, -x if x<0}",
     "target": "f(x) = \\begin{cases} x & \\text{if } x \\geq 0 \\\\ -x & \\text{if } x < 0 \\end{cases}",
     "hint": "Use \\begin{cases}...\\end{cases} for piecewise functions, & to separate values from conditions, and \\\\ for new lines.",
@@ -136,7 +336,7 @@
     "topic": "algebra"
   },
   {
-    "id": 18,
+    "id": 43,
     "prompt": "Write the binomial coefficient formula: C(n,k) = n!/(k!(n-k)!)",
     "target": "C(n,k) = \\binom{n}{k} = \\frac{n!}{k!(n-k)!}",
     "hint": "Use \\binom{n}{k} for binomial coefficients and \\frac{}{} for the fraction.",
@@ -144,7 +344,7 @@
     "topic": "combinatorics"
   },
   {
-    "id": 19,
+    "id": 44,
     "prompt": "Write an equation with a triple integral: ∭(V) f(x,y,z) dV",
     "target": "\\iiint_{V} f(x,y,z) \\, dV",
     "hint": "Use \\iiint_{region} for triple integrals.",
@@ -152,11 +352,211 @@
     "topic": "calculus"
   },
   {
-    "id": 20,
+    "id": 45,
     "prompt": "Write a simple differential equation: dy/dx + P(x)y = Q(x)",
     "target": "\\frac{dy}{dx} + P(x)y = Q(x)",
     "hint": "Use \\frac{dy}{dx} for the derivative notation.",
     "level": "advanced",
     "topic": "differential equations"
+  },
+  {
+    "id": 46,
+    "prompt": "Write the absolute value: |x - 5|",
+    "target": "|x - 5|",
+    "hint": "Just use the | symbol for absolute value.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 47,
+    "prompt": "Write an equation with a subscripted Greek letter: σ²ₓ",
+    "target": "\\sigma^2_x",
+    "hint": "Use \\sigma for the Greek letter, ^2 for the superscript, and _x for the subscript.",
+    "level": "intermediate",
+    "topic": "statistics"
+  },
+  {
+    "id": 48,
+    "prompt": "Write the normal distribution formula: f(x) = (1/(σ√(2π)))e^(-(x-μ)²/(2σ²))",
+    "target": "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}",
+    "hint": "Use \\frac{}{} for fractions, \\sigma and \\mu for Greek letters, and \\sqrt{} for square root.",
+    "level": "advanced",
+    "topic": "statistics"
+  },
+  {
+    "id": 49,
+    "prompt": "Write the equation for expected value: E[X] = ∑(x·P(X=x))",
+    "target": "E[X] = \\sum x \\cdot P(X=x)",
+    "hint": "Use \\sum for summation and \\cdot for the multiplication dot.",
+    "level": "intermediate",
+    "topic": "statistics"
+  },
+  {
+    "id": 50,
+    "prompt": "Write the variance formula: Var(X) = E[(X - μ)²]",
+    "target": "\\text{Var}(X) = E[(X - \\mu)^2]",
+    "hint": "Use \\text{Var} for 'Var' in text mode, and \\mu for the Greek letter μ.",
+    "level": "intermediate",
+    "topic": "statistics"
+  },
+  {
+    "id": 51,
+    "prompt": "Write the standard deviation formula: σ = √Var(X)",
+    "target": "\\sigma = \\sqrt{\\text{Var}(X)}",
+    "hint": "Use \\sigma for σ, \\sqrt{} for square root, and \\text{Var} for 'Var' in text mode.",
+    "level": "intermediate",
+    "topic": "statistics"
+  },
+  {
+    "id": 52,
+    "prompt": "Write a 3×3 zero matrix:",
+    "target": "\\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}",
+    "hint": "Use \\begin{pmatrix}...\\end{pmatrix} with & to separate columns and \\\\ for new rows.",
+    "level": "intermediate",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 53,
+    "prompt": "Write a vector dot product: →a·→b",
+    "target": "\\vec{a} \\cdot \\vec{b}",
+    "hint": "Use \\vec{} for vectors and \\cdot for the dot product symbol.",
+    "level": "intermediate",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 54,
+    "prompt": "Write a vector cross product: →a × →b",
+    "target": "\\vec{a} \\times \\vec{b}",
+    "hint": "Use \\vec{} for vectors and \\times for the cross product symbol.",
+    "level": "intermediate",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 55,
+    "prompt": "Write Newton's second law: F→ = m·a→",
+    "target": "\\vec{F} = m \\cdot \\vec{a}",
+    "hint": "Use \\vec{} for vectors and \\cdot for multiplication.",
+    "level": "intermediate",
+    "topic": "physics"
+  },
+  {
+    "id": 56,
+    "prompt": "Write the Schrödinger equation: iℏ∂Ψ/∂t = ĤΨ",
+    "target": "i\\hbar\\frac{\\partial\\Psi}{\\partial t} = \\hat{H}\\Psi",
+    "hint": "Use \\hbar for ℏ, \\partial for partial derivatives, \\Psi for Ψ, and \\hat{H} for Ĥ.",
+    "level": "expert",
+    "topic": "quantum physics"
+  },
+  {
+    "id": 57,
+    "prompt": "Write Maxwell's equation (Gauss's law): ∇·E→ = ρ/ε₀",
+    "target": "\\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0}",
+    "hint": "Use \\nabla for ∇, \\cdot for dot product, \\vec{E} for E→, and \\varepsilon_0 for ε₀.",
+    "level": "expert",
+    "topic": "electromagnetism"
+  },
+  {
+    "id": 58,
+    "prompt": "Write a union in set theory: A ∪ B",
+    "target": "A \\cup B",
+    "hint": "Use \\cup for the union symbol ∪.",
+    "level": "beginner",
+    "topic": "set theory"
+  },
+  {
+    "id": 59,
+    "prompt": "Write an intersection in set theory: A ∩ B",
+    "target": "A \\cap B",
+    "hint": "Use \\cap for the intersection symbol ∩.",
+    "level": "beginner",
+    "topic": "set theory"
+  },
+  {
+    "id": 60,
+    "prompt": "Write the set difference: A \\ B",
+    "target": "A \\setminus B",
+    "hint": "Use \\setminus for the set difference symbol \\.",
+    "level": "beginner",
+    "topic": "set theory"
+  },
+  {
+    "id": 61,
+    "prompt": "Write the subset relation: A ⊆ B",
+    "target": "A \\subseteq B",
+    "hint": "Use \\subseteq for the subset or equal to symbol ⊆.",
+    "level": "beginner",
+    "topic": "set theory"
+  },
+  {
+    "id": 62,
+    "prompt": "Write the element of relation: x ∈ A",
+    "target": "x \\in A",
+    "hint": "Use \\in for the element of symbol ∈.",
+    "level": "beginner",
+    "topic": "set theory"
+  },
+  {
+    "id": 63,
+    "prompt": "Write the not element of relation: y ∉ B",
+    "target": "y \\notin B",
+    "hint": "Use \\notin for the not element of symbol ∉.",
+    "level": "beginner",
+    "topic": "set theory"
+  },
+  {
+    "id": 64,
+    "prompt": "Write the empty set symbol: ∅",
+    "target": "\\emptyset",
+    "hint": "Use \\emptyset for the empty set symbol ∅.",
+    "level": "beginner",
+    "topic": "set theory"
+  },
+  {
+    "id": 65,
+    "prompt": "Write the second derivative: d²y/dx²",
+    "target": "\\frac{d^2y}{dx^2}",
+    "hint": "Use \\frac{d^2y}{dx^2} for the second derivative notation.",
+    "level": "intermediate",
+    "topic": "calculus"
+  },
+  {
+    "id": 66,
+    "prompt": "Write a system of linear equations:\nx + y = 5\n2x - 3y = 1",
+    "target": "\\begin{cases} x + y = 5 \\\\ 2x - 3y = 1 \\end{cases}",
+    "hint": "Use \\begin{cases}...\\end{cases} with \\\\ to separate equations.",
+    "level": "intermediate",
+    "topic": "linear algebra"
+  },
+  {
+    "id": 67,
+    "prompt": "Write a sequence with ellipsis: a₁, a₂, a₃, ..., aₙ",
+    "target": "a_1, a_2, a_3, \\ldots, a_n",
+    "hint": "Use \\ldots for horizontal ellipsis and _ for subscripts.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 68,
+    "prompt": "Write the infinity symbol: ∞",
+    "target": "\\infty",
+    "hint": "Use \\infty for the infinity symbol ∞.",
+    "level": "beginner",
+    "topic": "calculus"
+  },
+  {
+    "id": 69,
+    "prompt": "Write an approximate equation: π ≈ 3.14159",
+    "target": "\\pi \\approx 3.14159",
+    "hint": "Use \\approx for the approximately equal to symbol ≈ and \\pi for π.",
+    "level": "beginner",
+    "topic": "algebra"
+  },
+  {
+    "id": 70,
+    "prompt": "Write Einstein's mass-energy equivalence: E = mc²",
+    "target": "E = mc^2",
+    "hint": "Use ^ for exponents: c^2 creates c².",
+    "level": "beginner",
+    "topic": "physics"
   }
 ]
