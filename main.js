@@ -16,6 +16,16 @@ const showAnswerButton = document.getElementById('showAnswerButton');
 // State variables
 let questions = [];
 let currentQuestionIndex = 0;
+let questionOrder = [];
+
+// Shuffle array using Fisher-Yates algorithm
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 // Fetch questions from JSON file
 async function fetchQuestions() {
@@ -30,8 +40,12 @@ async function fetchQuestions() {
         const levelOrder = { 'beginner': 0, 'intermediate': 1, 'advanced': 2, 'expert': 3 };
         questions.sort((a, b) => levelOrder[a.level] - levelOrder[b.level]);
         
+        // Initialize question order
+        questionOrder = Array.from({length: questions.length}, (_, i) => i);
+        shuffleArray(questionOrder);
+        
         // Initialize first question
-        loadQuestion(currentQuestionIndex);
+        loadQuestion(0);
     } catch (error) {
         console.error('Error loading questions:', error);
         promptText.textContent = 'Error loading questions. Please check the console.';
@@ -45,7 +59,7 @@ function loadQuestion(index) {
         return;
     }
     
-    const question = questions[index];
+    const question = questions[questionOrder[index]];
     promptText.textContent = question.prompt;
     
     // Display the target formula using MathJax
@@ -80,7 +94,7 @@ checkButton.addEventListener('click', function() {
     const userInput = latexInput.value.trim()
         .replace(/\s+/g, '')  // Remove all whitespace
         .replace(/^\$|\$$/g, '');
-    const correctAnswer = questions[currentQuestionIndex].target.trim()
+    const correctAnswer = questions[questionOrder[currentQuestionIndex]].target.trim()
         .replace(/\s+/g, '')  // Remove all whitespace
         .replace(/^\$|\$$/g, '');
     
@@ -98,7 +112,7 @@ checkButton.addEventListener('click', function() {
 
 // Show hint button
 hintButton.addEventListener('click', function() {
-    hintArea.textContent = questions[currentQuestionIndex].hint;
+    hintArea.textContent = questions[questionOrder[currentQuestionIndex]].hint;
     hintArea.style.display = 'block';
 });
 
@@ -108,15 +122,10 @@ nextButton.addEventListener('click', function() {
     if (currentQuestionIndex < questions.length) {
         loadQuestion(currentQuestionIndex);
     } else {
-        // End of questions
-        promptText.textContent = 'Congratulations! You\'ve completed all questions.';
-        targetDisplay.innerHTML = '';
-        latexInput.value = '';
-        previewArea.innerHTML = '';
-        checkButton.disabled = true;
-        hintButton.disabled = true;
-        nextButton.disabled = true;
-        progressInfo.textContent = 'All questions completed';
+        // End of questions - reshuffle and start over
+        shuffleArray(questionOrder);
+        currentQuestionIndex = 0;
+        loadQuestion(currentQuestionIndex);
     }
 });
 
