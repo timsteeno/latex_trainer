@@ -3,6 +3,7 @@
     "id": 1,
     "prompt": "Write the linear equation: y = 3x + 5",
     "target": "y = 3x + 5",
+    "alternatives": [],
     "hint": "This is a basic linear equation. Just type it exactly as shown.",
     "level": "beginner",
     "topic": "algebra"
@@ -75,7 +76,8 @@
     "id": 10,
     "prompt": "Write a simple inequality: x < 5",
     "target": "x < 5",
-    "hint": "Just type the inequality as shown.",
+    "alternatives": ["x \\lt 5"],
+    "hint": "You can use either < or \\lt for the less than symbol.",
     "level": "beginner",
     "topic": "algebra"
   },
@@ -83,7 +85,8 @@
     "id": 11,
     "prompt": "Write the greater than or equal to inequality: y ≥ 10",
     "target": "y \\geq 10",
-    "hint": "Use \\geq for the greater than or equal to symbol.",
+    "alternatives": ["y \\ge 10", "y ≥ 10"],
+    "hint": "You can use either \\geq or \\ge for the greater than or equal to symbol.",
     "level": "beginner",
     "topic": "algebra"
   },
@@ -97,7 +100,7 @@
   },
   {
     "id": 13,
-    "prompt": "Write the distance formula: d = √[(x₂ - x₁)² + (y₂ - y₁)²]",
+    "prompt": "Write the distance formula: d = √((x₂ - x₁)² + (y₂ - y₁)²)",
     "target": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}",
     "hint": "Use \\sqrt{} for square root, _ for subscripts, and ^ for exponents.",
     "level": "beginner",
@@ -225,7 +228,7 @@
   },
   {
     "id": 29,
-    "prompt": "Write a fraction with variables: (x + y)/(a - b)",
+    "prompt": "Write a fraction with variables: x + y/a - b",
     "target": "\\frac{x + y}{a - b}",
     "hint": "Use \\frac{numerator}{denominator} for fractions.",
     "level": "beginner",
@@ -363,7 +366,8 @@
     "id": 46,
     "prompt": "Write the absolute value: |x - 5|",
     "target": "|x - 5|",
-    "hint": "Just use the | symbol for absolute value.",
+    "alternatives": ["\\left|x - 5\\right|", "\\lvert x - 5 \\rvert"],
+    "hint": "You can use |, \\left|\\right|, or \\lvert\\rvert for absolute value.",
     "level": "beginner",
     "topic": "algebra"
   },
@@ -419,7 +423,8 @@
     "id": 53,
     "prompt": "Write a vector dot product: →a·→b",
     "target": "\\vec{a} \\cdot \\vec{b}",
-    "hint": "Use \\vec{} for vectors and \\cdot for the dot product symbol.",
+    "alternatives": ["\\vec{a} \\dot \\vec{b}"],
+    "hint": "You can use either \\cdot or \\dot for the dot product symbol.",
     "level": "intermediate",
     "topic": "linear algebra"
   },
@@ -459,7 +464,8 @@
     "id": 58,
     "prompt": "Write a union in set theory: A ∪ B",
     "target": "A \\cup B",
-    "hint": "Use \\cup for the union symbol ∪.",
+    "alternatives": ["A \\bigcup B"],
+    "hint": "You can use either \\cup or \\bigcup for the union symbol.",
     "level": "beginner",
     "topic": "set theory"
   },
@@ -467,7 +473,8 @@
     "id": 59,
     "prompt": "Write an intersection in set theory: A ∩ B",
     "target": "A \\cap B",
-    "hint": "Use \\cap for the intersection symbol ∩.",
+    "alternatives": ["A \\bigcap B"],
+    "hint": "You can use either \\cap or \\bigcap for the intersection symbol.",
     "level": "beginner",
     "topic": "set theory"
   },

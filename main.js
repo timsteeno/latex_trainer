@@ -165,12 +165,23 @@ checkButton.addEventListener('click', function() {
     const userInput = latexInput.value.trim()
         .replace(/\s+/g, '')  // Remove all whitespace
         .replace(/^\$|\$$/g, '');
-    const correctAnswer = questions[levelQuestions[currentQuestionIndex]].target.trim()
+    const question = questions[levelQuestions[currentQuestionIndex]];
+    const correctAnswer = question.target.trim()
         .replace(/\s+/g, '')  // Remove all whitespace
         .replace(/^\$|\$$/g, '');
     
-    // Compare the normalized strings
-    if (userInput === correctAnswer) {
+    // Get all valid answers (target + alternatives)
+    const validAnswers = [correctAnswer];
+    if (question.alternatives && question.alternatives.length > 0) {
+        validAnswers.push(...question.alternatives.map(alt => 
+            alt.trim().replace(/\s+/g, '').replace(/^\$|\$$/g, '')
+        ));
+    }
+    
+    // Check if user input matches any valid answer
+    const isCorrect = validAnswers.some(answer => userInput === answer);
+    
+    if (isCorrect) {
         feedback.textContent = 'Correct! Well done.';
         feedback.className = 'feedback correct';
         nextButton.disabled = false;
